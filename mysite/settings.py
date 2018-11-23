@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fabiozr$girls',
-        'USER': 'fabiozr',
-        'PASSWORD': 'tele6080711',
-        'HOST': 'fabiozr.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'NAME': 'girls',
+        'USER': 'root',
+        'PASSWORD': '2010',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -124,3 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+ # When the login page is accessed directly, it will redirect a successful login to the top-level index (the homepage of our blog).
+
+LOGIN_REDIRECT_URL = '/'
